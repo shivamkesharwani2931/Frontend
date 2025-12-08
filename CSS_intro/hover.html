@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes and elements</title>
+</head>
+<style>
+    .container {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+    }
+
+    .container:hover {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(50, 150, 233);
+    }
+
+    h2::after {
+        content: "❌";
+    }
+
+    h2::before {
+        content: "👉";
+    }
+</style>
+<body>
+    <h1>Pseudo classes and elements</h1>
+    <div class="container"></div>
+    <h2>Bird has 4 legs: </h2>
+    <h2>Human can't talk: </h2>
+</body>
+</html>
