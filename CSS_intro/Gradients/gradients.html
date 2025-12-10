@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Gradient Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-transform: capitalize;
+            font-size: 80px;
+            font-weight: bold;
+            text-align: left;
+
+            /* Gradient */
+            background: linear-gradient(45deg,
+                    rgb(0, 7, 7),
+                    rgb(228, 63, 63),
+                    rgb(218, 218, 12));
+
+            background-size: 300% 300%;
+            animation: colorMove 4s ease infinite;
+            /* Clip the gradient into the text */
+            /* -webkit-background-clip: text; */
+            background-clip: text;
+            color: transparent;
+            /* -webkit-text-fill-color: transparent; */
+        }
+
+        @keyframes colorMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+</body>
+
+</html>
