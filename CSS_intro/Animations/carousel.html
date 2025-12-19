@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carousel</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  .container {
+    width: 80%;
+    height: 300px;
+    margin: 150px auto;
+    background: gray;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .track {
+    display: flex;
+    gap: 10px;
+    animation: carousel 10s linear infinite;
+  }
+
+  .box {
+    flex: 0 0 200px;
+    height: 200px;
+    background: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  @keyframes carousel {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="track">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+
+      <!-- Duplicate for seamless loop -->
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+  </div>
+</body>
+</html>
