@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix 2D</title>
+
+    <style>
+        .container {
+            text-align: center;
+            color: white;
+            height: 100%;
+            width: 600px;
+            background-color: black;
+            padding: 20px 0;
+            margin: 20px auto;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.4s ease;
+        }
+
+        /* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+        .child-1:hover {
+            transform: matrix(1, 0, 0, 1, 50, 30);
+        }
+
+        /* scale using matrix */
+        .child-2:hover {
+            transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+        }
+
+        /* skew using matrix */
+        .child-3:hover {
+            transform: matrix(1, 0.5, 0.5, 1, 0, 0);
+        }
+
+        /* translate + scale */
+        .child-4:hover {
+            transform: matrix(1.2, 0, 0, 1.2, 60, 0);
+        }
+
+        /* combined transform */
+        .child-5:hover {
+            transform: matrix(1, 0.3, 0.2, 1, 40, 20);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Matrix 2D Transformation
+
+        <div class="box child-1">translate</div>
+        <div class="box child-2">scale</div>
+        <div class="box child-3">skew</div>
+        <div class="box child-4">scale + move</div>
+        <div class="box child-5">combined</div>
+    </div>
+</body>
+
+</html>

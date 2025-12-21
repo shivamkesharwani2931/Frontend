@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix3D</title>
+
+    <style>
+        body {
+            perspective: 1000px;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            width: 700px;
+            background-color: black;
+            padding: 20px 0;
+            margin: 20px auto;
+        }
+
+        .box {
+            height: 100px;
+            width: 120px;
+            background-color: teal;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.6s ease;
+            transform-style: preserve-3d;
+        }
+
+        /* matrix3d example */
+        .child-1:hover {
+            transform: matrix3d(
+                1, 0, 0, 0,   /* scaleX, skewY, skewZ, 0 */
+                0, 1, 0.3, 0, /* skewX, scaleY, skewZ, 0 */
+                0, 0.3, 1, 0, /* skewX, skewY, scaleZ, 0 */
+                50, 0, 100, 1 /* translateX, translateY, translateZ, 1 */
+            );
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        CSS 3D Transformation: matrix3d()
+
+        <div class="box child-1">matrix3d()</div>
+
+    </div>
+</body>
+
+</html>

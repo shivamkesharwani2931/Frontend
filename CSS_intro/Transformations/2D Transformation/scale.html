@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale 2D</title>
+
+    <style>
+        .container {
+            text-align: center;
+            color: white;
+            height: 100%;
+            width: 600px;
+            background-color: black;
+            padding: 20px 0;
+            margin: 20px auto;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.4s ease;
+        }
+
+        /* scale(x, y) */
+        .child-1:hover {
+            transform: scale(1.5);
+        }
+
+        /* scaleX */
+        .child-2:hover {
+            transform: scaleX(1.8);
+        }
+
+        /* scaleY */
+        .child-3:hover {
+            transform: scaleY(1.8);
+        }
+
+        /* scale down */
+        .child-4:hover {
+            transform: scale(0.6);
+        }
+
+        /* combined scale */
+        .child-5:hover {
+            transform: scale(1.5, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Scale 2D Properties
+
+        <div class="box child-1">scale()</div>
+        <div class="box child-2">scaleX()</div>
+        <div class="box child-3">scaleY()</div>
+        <div class="box child-4">scale down</div>
+        <div class="box child-5">scale(x, y)</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .box {
+            width: 120px;
+            height: 100px;
+            background-color: teal;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+
+        /* Float examples */
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        /* Clear examples */
+        .clear-left {
+            clear: left;
+        }
+
+        .clear-right {
+            clear: right;
+        }
+
+        .clear-both {
+            clear: both;
+        }
+
+        /* Optional: clearfix for container */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <h2>CSS Float and Clear Example</h2>
+
+        <p>Floating boxes:</p>
+        <div class="box float-left">Left Float</div>
+        <div class="box float-right">Right Float</div>
+
+        <p>Normal content wraps around floated elements unless cleared:</p>
+        <div class="box clear-left" style="background-color: orange;">Clear Left</div>
+        <div class="box clear-right" style="background-color: purple;">Clear Right</div>
+        <div class="box clear-both" style="background-color: green;">Clear Both</div>
+
+        <p>Without clearing, the next elements wrap around floats.</p>
+    </div>
+</body>
+
+</html>

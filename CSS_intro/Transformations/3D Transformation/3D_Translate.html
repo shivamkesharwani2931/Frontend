@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate 3D</title>
+
+    <style>
+        body {
+            perspective: 800px;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            width: 600px;
+            background-color: black;
+            padding: 20px 0;
+            margin: 20px auto;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        /* translateZ */
+        .child-1:hover {
+            transform: translateZ(100px);
+        }
+
+        /* translate3d(x, y, z) */
+        .child-2:hover {
+            transform: translate3d(50px, 0, 80px);
+        }
+
+        /* translate3d on Y axis */
+        .child-3:hover {
+            transform: translate3d(0, 50px, 80px);
+        }
+
+        /* negative Z (moves away) */
+        .child-4:hover {
+            transform: translateZ(-100px);
+        }
+
+        /* combined translate3d */
+        .child-5:hover {
+            transform: translate3d(40px, 40px, 120px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Translate 3D Transformations
+
+        <div class="box child-1">translateZ()</div>
+        <div class="box child-2">translate3d()</div>
+        <div class="box child-3">Y + Z</div>
+        <div class="box child-4">-Z</div>
+        <div class="box child-5">combined</div>
+    </div>
+</body>
+
+</html>
