@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+
+    nav {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      background-color: #fff;
+      border-bottom: 1px solid #dbdbdb;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo img {
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .search input {
+      width: 250px;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid #dbdbdb;
+      outline: none;
+      background-color: #efefef;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .container img {
+      height: 26px;
+      cursor: pointer;
+    }
+
+    .container img:hover {
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <section class="logo">
+      <img src="./utils/image.png" alt="Instagram Logo">
+    </section>
+
+    <section class="search">
+      <input type="text" placeholder="🔍 Search">
+    </section>
+
+    <section class="container">
+      <img src="./utils/home.png" alt="Home">
+      <img src="./utils/send.png" alt="Messages">
+      <img src="./utils/compass.png" alt="Explore">
+      <img src="./utils/heart.png" alt="Notifications">
+      <img src="./utils/user.png" alt="Profile">
+    </section>
+  </nav>
+
+</body>
+
+</html>
+
+
+<br><br><br><br>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f3f2ef;
+    }
+
+    nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-left {
+      margin-left: 37px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .section-left img {
+      height: 42px;
+      cursor: pointer;
+    }
+
+    .section-left input {
+      height: 34px;
+      width: 280px;
+      padding: 0 12px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      background-color: #eef3f8;
+      font-size: 15px;
+    }
+
+    .section-right {
+      display: flex;
+      align-items: center;
+      gap: 55px;
+      padding-right: 30px;
+    }
+
+    .section-right img {
+      height: 32px;
+      cursor: pointer;
+    }
+
+    .side {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding-left: 40px;
+      border-left: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <section class="section-left">
+      <img src="./utils/linkedin.png" alt="linkedin">
+      <input type="text" placeholder="🔍 Search">
+    </section>
+
+    <section class="section-right">
+      <img src="./utils/home (1).png" alt="home">
+      <img src="./utils/group.png" alt="network">
+      <img src="./utils/bag.png" alt="jobs">
+      <img src="./utils/chat-bubble.png" alt="messaging">
+      <img src="./utils/user.png" alt="profile">
+      <section class="side">
+        <img src="./utils/dots-menu.png" alt="menu">
+        <img src="./utils/video-player.png" alt="play">
+      </section>
+    </section>
+  </nav>
+</body>
+
+</html>

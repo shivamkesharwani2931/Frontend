@@ -5,51 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tooltip</title>
+
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 400px;
-            width: 100%;
             background-color: rgb(241, 204, 204);
-            color: white;
+        }
+
+        .tooltip {
             position: relative;
-            z-index: 1;
         }
 
         .btn {
-            text-align: center;
             border-radius: 10px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             cursor: pointer;
             background-color: #d62d2d;
+            color: white;
+            font-size: 18px;
         }
 
+        /* Tooltip box */
         .text-tooltip {
-            visibility: hidden;
             position: absolute;
-            top: 100px;
-            left: 580px;
-            padding: 15px 20px;
+            bottom: 150%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background-color: rgb(171, 156, 146);
+            color: black;
+            padding: 12px 20px;
             border-radius: 10px;
-            background-color: chocolate;
-            z-index: 5;
+            font-size: 18px;
+            white-space: nowrap;
+            z-index: 10;
+
+            /* transition + glow */
+            opacity: 0;
+            visibility: hidden;
+            border: 2px solid transparent;
+            box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+            transition:
+                opacity 0.4s ease,
+                transform 0.4s ease,
+                box-shadow 0.4s ease,
+                border 0.4s ease;
         }
 
+        /* Tooltip arrow */
+        .text-tooltip::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 8px;
+            border-style: solid;
+            border-color: rgb(171, 156, 146) transparent transparent transparent;
+        }
 
-        .btn:hover+.text-tooltip {
+        /* Hover effect */
+        .tooltip:hover .text-tooltip {
+            opacity: 1;
             visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            border: 2px solid #ff4d4d;
+            box-shadow: 0 0 12px #ff4d4d;
         }
     </style>
 </head>
 
 <body>
+
     <div class="container">
         <div class="tooltip">
-            <div class="btn">Click Me</div>
-            <span class="text-tooltip">Happy New Year 2026🎊</span>
+            <button class="btn">Click Me</button>
+            <span class="text-tooltip">Happy New Year 2026 🎊</span>
         </div>
     </div>
 

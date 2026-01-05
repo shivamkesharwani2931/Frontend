@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination</title>
+  <style>
+    .container {
+      height: 270px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrapper .button {
+      background-color: rgb(219, 215, 215);
+      color: black;
+      height: 70px;
+      width: 70px;
+      text-align: center;
+      font-weight: 700;
+      border-radius: 50%;
+      font-size: 20px;
+      border-color: inset  gray;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="button"><</div>
+      <div class="button">1</div>
+      <div class="button">2</div>
+      <div class="button">3</div>
+      <div class="button">4</div>
+      <div class="button">5</div>
+      <div class="button">6</div>
+      <div class="button">7</div>
+      <div class="button">></div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Only Pagination</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 40px;
+}
+
+/* ===== COMMON ===== */
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 35px;
+}
+
+/* ===== BUTTON ===== */
+.page {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e5e5;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.page:hover {
+    background: #d1d1d1;
+}
+
+/* ===== ACTIVE ===== */
+.page.active {
+    background: #1e88e5;
+    color: white;
+    font-weight: bold;
+}
+
+/* ===== ARROWS ===== */
+.arrow {
+    background: #000;
+    color: #fff;
+}
+
+.arrow:hover {
+    background: #333;
+}
+
+/* ===== DOTS ===== */
+.dots {
+    background: transparent;
+    cursor: default;
+}
+
+/* ===== STYLE VARIATIONS ===== */
+
+/* Orange style */
+.orange .page.active {
+    background: #ff8c00;
+}
+
+/* Dark style */
+.dark {
+    background: #0f172a;
+    padding: 12px;
+    border-radius: 12px;
+}
+.dark .page {
+    background: #020617;
+    color: #38bdf8;
+}
+.dark .page.active {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* Rounded pill */
+.pill .page {
+    border-radius: 50px;
+}
+
+/* Minimal */
+.minimal .page {
+    background: transparent;
+}
+.minimal .page.active {
+    background: #1e88e5;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1️⃣ BASIC -->
+<div class="pagination">
+    <a class="page arrow">‹</a>
+    <a class="page active">1</a>
+    <a class="page">2</a>
+    <a class="page">3</a>
+    <a class="page">4</a>
+    <a class="page">5</a>
+    <span class="page dots">...</span>
+    <a class="page">10</a>
+    <a class="page arrow">›</a>
+</div>
+
+<!-- 2️⃣ ORANGE -->
+<div class="pagination orange">
+    <a class="page">Previous</a>
+    <a class="page active">1</a>
+    <a class="page">2</a>
+    <a class="page">3</a>
+    <a class="page">4</a>
+    <a class="page">5</a>
+    <span class="page dots">...</span>
+    <a class="page">10</a>
+    <a class="page">Next</a>
+</div>
+
+<!-- 3️⃣ DARK -->
+<div class="pagination dark">
+    <a class="page arrow">‹</a>
+    <a class="page active">1</a>
+    <a class="page">2</a>
+    <a class="page">3</a>
+    <a class="page">4</a>
+    <a class="page">5</a>
+    <span class="page dots">...</span>
+    <a class="page">10</a>
+    <a class="page arrow">›</a>
+</div>
+
+<!-- 4️⃣ PILL -->
+<div class="pagination pill">
+    <a class="page arrow">‹</a>
+    <a class="page active">1</a>
+    <a class="page">2</a>
+    <a class="page">3</a>
+    <a class="page">4</a>
+    <a class="page">5</a>
+    <span class="page dots">...</span>
+    <a class="page">10</a>
+    <a class="page arrow">›</a>
+</div>
+
+<!-- 5️⃣ MINIMAL -->
+<div class="pagination minimal">
+    <a class="page">‹ Prev</a>
+    <a class="page active">1</a>
+    <a class="page">2</a>
+    <a class="page">3</a>
+    <a class="page">4</a>
+    <a class="page">5</a>
+    <span class="page dots">...</span>
+    <a class="page">10</a>
+    <a class="page">Next ›</a>
+</div>
+
+</body>
+</html> -->
