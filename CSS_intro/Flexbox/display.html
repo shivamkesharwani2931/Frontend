@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+  <style>
+    .parent {
+      display: flow-root;
+      /* display: contents; */
+      border: 2px solid black;
+    }
+
+    .child {
+      background-color: aqua;
+      float: right;
+    }
+
+    .parent>.child>h1 {
+      color: red;
+    }
+
+    .inline-flex {
+      display: inline-flex;
+      /* border: 2px solid black; */
+    }
+
+    .inline-flex>div:first-child {
+      background: tomato;
+    }
+
+    .inline-flex>div:last-child {
+      background: teal;
+    }
+
+    .inline {
+      background: #b9bf0f;
+      display: block;
+    }
+
+    .block {
+      background: #38cf0a;
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- flow-root -->
+  <h2>display:flow-root</h2>
+  <div class="parent">
+    <div class="child">
+      <h1>Hello</h1>
+    </div>
+  </div>
+  <hr><br>
+
+  <!-- inline-flex -->
+  <h2>display:inline-flex</h2>
+  <div class="inline-flex">
+    <div>😂</div>
+    <div>like</div>
+  </div>
+  <hr><br>
+
+  <!-- block and inline display -->
+  <h2>display:block and display:inline</h2>
+  <div class="block">Hello</div>
+  <h2 class="block">hello</h2>
+
+  <span class="inline">world</span>
+  <a class="inline">world</a>
+
+<hr><br>
+
+</body>
+</html>
