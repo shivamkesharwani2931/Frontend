@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basis</title>
+     <style>
+        .container{
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .box{
+            border: 2px solid black;
+        }
+        .one{
+            width: 100px;
+            flex-basis:100px;
+            background-color: coral;
+        }
+        .two{
+            width: 200px;
+            background-color: aquamarine;
+        }
+        .three{
+            width: 300px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+</html>
