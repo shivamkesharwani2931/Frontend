@@ -35,13 +35,28 @@
     }
 
     .inline {
-      background: #b9bf0f;
+      background: #e3bf55;
       display: block;
     }
 
     .block {
       background: #38cf0a;
       display: inline;
+    }
+
+    .contents{
+      background-color: beige;
+      border: 1px solid gray;
+      height: 100px;
+      width: 100px;
+    }
+
+    .container{
+      height: 200px;
+      width: 200px;
+      border: 1px dashed black;
+      background-color: aqua;
+      display: contents;
     }
   </style>
 </head>
@@ -68,10 +83,16 @@
   <h2>display:block and display:inline</h2>
   <div class="block">Hello</div>
   <h2 class="block">hello</h2>
-
   <span class="inline">world</span>
   <a class="inline">world</a>
-
+  <hr><br>
+  
+  <!-- contents display -->
+  <h2>display:contents</h2>
+  <div class="container">
+    <div class="contents">Hello</div>
+  </div>
+  
 <hr><br>
 
 </body>

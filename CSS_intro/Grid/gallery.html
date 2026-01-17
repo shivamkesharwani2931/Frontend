@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery using grid</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff02ff, #4eff02);
+    }
+
+    .container {
+      padding: 40px;
+      margin: auto;
+      width: 80vw;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-areas:"img1 img1 img3"
+                          "img4 img5 img5"
+                          "img4 img6 img7"; */
+      grid-auto-rows: 170px;
+      gap: 10px;
+    }
+
+    .box {
+      background-position: top;
+      background-size: cover;
+      color: white;
+      font-size: 20px;
+      background-color: #3f3b3b;
+      background-blend-mode: hard-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 1s ease-in-out;
+    }
+
+    .box:hover {
+      background-color: #3f3b3b;
+      background-position: center;
+
+    }
+
+    .col2 {
+      grid-column: span 2;
+    }
+
+    .row2 {
+      grid-row: span 2;
+    }
+/* 
+    .box-1{
+      grid-area: img1;
+    } */
+
+    /* #box-6{
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-column: 1/3; shorthand for grid row start/end and grid column start/end
+      grid-row: 2/4;
+      grid-area: 1/2/3/4;  shorthand for grid row and column
+    }  */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box row2" id="box-1"
+      style="background-image: url(https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=800&auto=format&fit=crop&q=60);">
+      Forest Path
+    </div>
+
+    <div class="box col2" id="box-2"
+      style="background-image: url(https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&auto=format&fit=crop&q=60);">
+      Sunlight Through Trees
+    </div>
+
+    <div class="box" id="box-3"
+      style="background-image: url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&auto=format&fit=crop&q=60);">
+      Waterfall
+    </div>
+
+    <div class="box row2" id="box-4"
+      style="background-image: url(https://plus.unsplash.com/premium_photo-1711434824963-ca894373272e?w=800&auto=format&fit=crop&q=60);">
+      Mountain Landscape
+    </div>
+
+    <div class="box col2" id="box-5"
+      style="background-image: url(https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?w=800&auto=format&fit=crop&q=60);">
+      Misty Forest
+    </div>
+
+    <div class="box" id="box-6"
+      style="background-image: url(https://plus.unsplash.com/premium_photo-1669741909413-08072ccaedde?w=800&auto=format&fit=crop&q=60);">
+      Nature Valley
+    </div>
+
+    <div class="box col2" id="box-7"
+      style="background-image: url(https://plus.unsplash.com/premium_photo-1675827055620-24d540e0892a?w=800&auto=format&fit=crop&q=60);">
+      Green Hills
+    </div>
+  </div>
+
+
+</body>
+
+</html>
