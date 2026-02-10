@@ -1,4 +1,409 @@
+
+
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pagination Styles</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      padding: 40px;
+    }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 35px;
+    }
+
+    .page-btn {
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #f3f3f3;
+      color: #555;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .page-btn.active {
+      background: #e6e6e6;
+      border-color: #aaa;
+      font-weight: bold;
+    }
+
+    .pagination.light {
+      background: #efefef;
+      padding: 8px 12px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .pagination.light .page-btn {
+      background: transparent;
+      border: none;
+    }
+
+    .pagination.light .page-btn.active {
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+
+    .pagination.dark .page-btn {
+      background: #6f8797;
+      color: #fff;
+      border: none;
+    }
+
+    .pagination.dark .page-btn.active {
+      background: #c9302c;
+    }
+
+    .pagination.blue {
+      width: fit-content;
+      background: #4aa3df;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .pagination.blue .page-btn {
+      background: #fff;
+      border: none;
+      color: #333;
+    }
+
+    .pagination.blue .page-btn.active {
+      background: #1d6fa5;
+      color: #fff;
+    }
+
+    .pagination.blue .label {
+      color: #333;
+      margin-right: 10px;
+      font-size: 13px;
+      background-color: #fff;
+      padding: 7px;
+      border-radius: 4px;
+    }
+
+    /* ================= IMAGE PAGINATIONS ================= */
+
+    .pg {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 35px;
+    }
+
+    /* 1️⃣ Circular Light Pagination */
+    .pg.circle .btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .pg.circle .btn.active {
+      background: #2d8fd5;
+      color: #fff;
+    }
+
+    /* 2️⃣ Orange Rectangular Pagination */
+    .pg.orange .btn {
+      padding: 10px 18px;
+      background: #f39c12;
+      color: #fff;
+      border-radius: 3px;
+    }
+
+    .pg.orange .btn.active {
+      background: #d35400;
+    }
+
+    /* 3️⃣ Dark Pill Pagination */
+    /* ===== IMAGE 3 – FIXED (SEGMENTED PILL) ===== */
+    .pg.darkpill {
+      display: flex;
+      background: #1f2d3a;
+      border-radius: 40px;
+      overflow: hidden;
+      /* IMPORTANT */
+      padding: 0;
+      width: fit-content;
+    }
+
+    /* each segment */
+    .pg.darkpill .btn {
+      min-width: 48px;
+      height: 44px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #2fd3a5;
+      font-weight: 600;
+
+      /* divider line */
+      border-right: 1px solid #2f3f4f;
+    }
+
+    /* remove last divider */
+    .pg.darkpill .btn:last-child {
+      border-right: none;
+    }
+
+    /* arrows */
+    .pg.darkpill .btn.arrow {
+      color: #2fd3a5;
+      font-size: 18px;
+    }
+
+    /* active segment */
+    .pg.darkpill .btn.active {
+      background: #1abc9c;
+      color: #ffffff;
+    }
+
+    /* 4️⃣ Light Gray Pill */
+    /* ===== IMAGE 4 – FIXED (GRAY PILL WITH SEPARATE ARROWS) ===== */
+
+.pg.graypill{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* arrow buttons */
+.pg.graypill .arrow{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#e6e6e6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  color:#333;
+}
+
+/* pill container */
+.pg.graypill .pill{
+  display:flex;
+  background:#e6e6e6;
+  border-radius:30px;
+  overflow:hidden;
+}
+
+/* number segments */
+.pg.graypill .btn{
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#333;
+  font-weight:600;
+}
+
+/* active */
+.pg.graypill .btn.active{
+  background:#2371AD;
+  color:#fff;
+}
+
+
+    /* 5️⃣ Flat Gray Bar */
+    .pg.flat {
+      background: #eee;
+      padding: 12px 16px;
+      border-radius: 6px;
+      
+      width: fit-content;
+    }
+
+    .pg.flat .btn {
+      padding: 8px 14px;
+      color: #333;
+    }
+
+    .pg.flat .btn.active {
+      background: #2371AD;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    /* 6️⃣ Black Arrow Pagination */
+    .pg.black .arrow {
+      width: 40px;
+      height: 40px;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+
+    .pg.black .btn {
+      width: 36px;
+      height: 36px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- TOP PAGINATION -->
+  <div class="pagination light">
+    <span class="page-btn">◀</span>
+    <span class="page-btn">1</span>
+    <span class="page-btn">2</span>
+    <span class="page-btn">3</span>
+    <span class="page-btn">4</span>
+    <span class="page-btn active">5</span>
+    <span class="page-btn">6</span>
+    <span class="page-btn">7</span>
+    <span class="page-btn">8</span>
+    <span class="page-btn">9</span>
+    <span class="page-btn">…</span>
+    <span class="page-btn">104</span>
+    <span class="page-btn">▶</span>
+  </div>
+
+  <!-- MIDDLE PAGINATION -->
+  <div class="pagination dark">
+    <span class="page-btn">« First</span>
+    <span class="page-btn">«</span>
+    <span class="page-btn">1</span>
+    <span class="page-btn">2</span>
+    <span class="page-btn active">3</span>
+    <span class="page-btn">4</span>
+    <span class="page-btn">5</span>
+    <span class="page-btn">»</span>
+    <span class="page-btn">Last »</span>
+  </div>
+  
+  <!-- BOTTOM PAGINATION -->
+  <div class="pagination blue">
+    <span class="label">PAGE 1 of 11</span>
+    <span class="page-btn">«</span>
+    <span class="page-btn">1</span>
+    <span class="page-btn">2</span>
+    <span class="page-btn">3</span>
+    <span class="page-btn active">4</span>
+    <span class="page-btn">5</span>
+    <span class="page-btn">6</span>
+    <span class="page-btn">…</span>
+    <span class="page-btn">LAST »</span>
+  </div>
+  
+  <!-- IMAGE PAGINATION 1 -->
+  <div class="pg circle">
+    <div class="btn">‹</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn active">4</div>
+    <div class="btn">5</div>
+    <div class="btn">6</div>
+    <div class="btn">…</div>
+    <div class="btn">20</div>
+    <div class="btn">›</div>
+  </div>
+
+  <!-- IMAGE PAGINATION 2 -->
+  <div class="pg orange">
+    <div class="btn">Previous</div>
+    <div class="btn active">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">…</div>
+    <div class="btn">10</div>
+    <div class="btn">Next</div>
+  </div>
+  
+  <!-- IMAGE PAGINATION 3 -->
+  <div class="pg darkpill">
+    <div class="btn arrow">‹</div>
+    <div class="btn active">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">…</div>
+    <div class="btn">10</div>
+    <div class="btn arrow">›</div>
+  </div>
+  
+  
+  <!-- IMAGE PAGINATION 4 -->
+  <div class="pg graypill">
+  <div class="arrow">‹</div>
+  
+  <div class="pill">
+    <div class="btn active">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">…</div>
+    <div class="btn">10</div>
+  </div>
+
+  <div class="arrow">›</div>
+</div>
+
+
+<!-- IMAGE PAGINATION 5 -->
+  <div class="pg flat">
+    <div class="btn">‹ Prev</div>
+    <div class="btn active">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">…</div>
+    <div class="btn">10</div>
+    <div class="btn">Next ›</div>
+  </div>
+
+  <!-- IMAGE PAGINATION 6 -->
+  <div class="pg black">
+    <div class="arrow">‹</div>
+    <div class="btn">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">…</div>
+    <div class="btn">10</div>
+    <div class="arrow">›</div>
+  </div>
+  
+  
+</body>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -25,11 +430,10 @@
       outline: 2px solid gray;
       outline-offset: -10px;
     }
-
-   
   </style>
 </head>
 <body>
   <button id="btn">Click</button>
 </body>
+</html> -->
 </html>
