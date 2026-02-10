@@ -7,28 +7,31 @@
 //         console.log("no");
 //     default:
 //         console.log("Please select boolean value i.e true/false")
-
 // }
 
 
-let operator = process.argv[4]
-let a = process.argv[2]
-let b = process.argv[3]
+let a = +process.argv[2];
+let b = +process.argv[3];
+let operator = process.argv[4];
 
 switch(operator){
     case "+":
-        return a+b;
+        console.log(a+b);
+        break
 
     case "-":
-        return a-b;
+        console.log(a-b);
+        break
 
     case "*":
-        return a*b;
+        console.log(a*b);
+        break
     
     case "/":
-        return a/b;
+        console.log(a/b);
+        break
 
     default:
-        console.log("select proper operator")
+        console.log("select correct operator")
 }
 
