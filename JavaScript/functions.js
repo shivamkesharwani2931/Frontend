@@ -1,4 +1,3 @@
-
 let a = +process.argv[2];
 console.log(a)
 let b = +process.argv[3];
