@@ -1,13 +1,13 @@
-// const value = true;
-// switch (null) {
-//     case true:
-//         console.log("yes");
-//         break;
-//     case false:
-//         console.log("no");
-//     default:
-//         console.log("Please select boolean value i.e true/false")
-// }
+const value = true;
+switch (null) {
+    case true:
+        console.log("yes");
+        break;
+    case false:
+        console.log("no");
+    default:
+        console.log("Please select boolean value i.e true/false")
+}
 
 
 let a = +process.argv[2];

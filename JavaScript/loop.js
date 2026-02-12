@@ -56,7 +56,6 @@ console.log(`\n`)
 
 //Print cube of the first 10 natural numbers
 console.log("8. Cube of the first 10 natural numbers");
-num = process.argv[2]
 for (i = 1; i <= 10; i++) {
     console.log(i * i * i)
     // console.log(i**3)
@@ -64,6 +63,7 @@ for (i = 1; i <= 10; i++) {
 console.log(`\n`)
 
 //Print the first 10 multiples of 3
+console.log("9. Print the first 10 multiples of 3")
 let count = 0;
 for (let i = 1; i <= 50; i++) {
     if (i % 3 == 0 && count < 10) {
@@ -73,10 +73,26 @@ for (let i = 1; i <= 50; i++) {
 } console.log(`\n`)
 
 //Print the factorial of a given number
+console.log("10. Print the factorial of a given number")
 let num = +process.argv[2];   // change this number
 let factorial = 1;
 for (let i = 1; i <= num; i++) {
     factorial *= i;
 }
 console.log("Factorial of " + num + " is " + factorial);
-console.log(`\n`)
+console.log(`\n`);
+
+
+//while loop
+let j=1;
+while(j<=10){
+    console.log(j);
+    j++;
+}
+
+//do-while loop
+let x=0;
+do{
+    console.log("this is do-while loop");
+    x++;
+}while(x<10);
