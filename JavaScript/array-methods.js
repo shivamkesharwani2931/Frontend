@@ -42,10 +42,27 @@ console.log(even); // [2, 4]
 
 // 7. reduce()
 // Reduces array to a single value.
+// array.reduce((accumulator, currentValue, index, array) => {
+//   // return updated accumulator
+// }, initialValue);
+
 let arr7 = [1, 2, 3, 4];
 let sum = arr7.reduce((total, num) => total + num, 0);
 console.log(sum); // 10
 
+//  example 2
+let array1=[1,2,3,4,5,6,7]
+const ans = array1.reduce((initial,current)=>{
+    return initial+current
+},0)
+console.log(ans);
+
+let fruits=['mango','banana','apple','pineapple','apple','banana','orange','mango','banana','lichi','guava','kiwi','kiwi'];
+const ans2 = fruits.reduce((initial,current)=>{
+    initial[current] = (initial[current]||0) +1
+    return initial
+},{})
+console.log(ans2);
 
 // 8. forEach()
 // Executes a function for each array element.
