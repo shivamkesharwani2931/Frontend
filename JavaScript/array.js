@@ -22,3 +22,9 @@ console.log(array[7]);
 for(let i=0;i<array.length;i++){
   console.log(`\n This is the value :${array[i]} \n this is index:${i}`)
 };
+
+
+//for-of loop
+for (arr of array){
+  console.log(arr);
+}
