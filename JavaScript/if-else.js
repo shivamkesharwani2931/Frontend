@@ -71,3 +71,55 @@ else if (score >= 0 && score < 60) {
 else {
     console.log("Invalid score");
 }
+
+
+// 7. Categorize person by age:
+let newAge =10;
+if (newAge >= 0 && newAge <= 12) {
+    console.log("Child");
+}
+else if (newAge >= 13 && newAge <= 19) {
+    console.log("Teen");
+}
+else if (newAge >= 20 && newAge <= 59) {
+    console.log("Adult");
+}
+else if (newAge >= 60) {
+    console.log("Senior");
+}
+else {
+    console.log("Invalid age");
+}
+
+//8. Check if a given character is a vowel or consonant.
+let char = 'o';
+if (char.length === 1) {
+    if (
+        char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' ||
+        char === 'A' || char === 'E' || char === 'I' || char === 'O' || char === 'U'
+    ) {
+        console.log("Vowel");
+    }
+    else if (
+        (char >= 'a' && char <= 'z') ||
+        (char >= 'A' && char <= 'Z')
+    ) {
+        console.log("Consonant");
+    }
+    else {
+        console.log("Invalid input");
+    }
+} else {
+    console.log("Invalid input");
+}
+
+//9. Check if a number is divisible by both 3 and 5
+let number = 15;
+if (number % 3 === 0 && number % 5 === 0) {
+    console.log("Number is divisible by both 3 and 5");
+} else {
+    console.log("Number is NOT divisible by both 3 and 5");
+}
+
+// 10. A temperature is given. Print Cold, Pleasant, Hot.
+

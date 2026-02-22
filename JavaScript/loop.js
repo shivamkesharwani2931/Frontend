@@ -96,3 +96,37 @@ do{
     console.log("this is do-while loop");
     x++;
 }while(x<10);
+
+
+// Intermediate Loop Practice Questions
+
+// 1. Print the reverse of a given number (e.g. 123 → 321)
+// 2. Print the sum of digits of a given number (e.g. 432 → 9)
+// 3. Check if a given number is prime using loops
+// 4. Print the Fibonacci sequence up to n terms
+let n1 = 6;
+let a = 0, b = 1;
+console.log(a);
+console.log(b);
+
+for (let i = 3; i <= n1; i++) {
+    let next = a + b;
+    console.log(next);
+    a = b;
+    b = next;
+}
+// 5. Print all numbers between 1 and 200 that are divisible by both 3 and 5
+for (let i = 1; i <= 200; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log(i);
+  }
+}
+
+// 6. Count how many digits are in a given number
+// 7. Check if a number is a palindrome using loops (e.g. 121 → Palindrome)
+
+// 8. Print the multiplication table of any number entered by the user
+let n = 7;
+for (let i = 1; i <= 10; i++) {
+  console.log(`${n} x ${i} = ${n * i}`);
+}
