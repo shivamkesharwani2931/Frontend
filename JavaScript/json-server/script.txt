@@ -1,0 +1,8 @@
+->json server
+  ->backend
+    ->db.json
+    ->package.json=>[ npm init -y ] => chnage the line into - "server": "json-server db.json --watch --port 8080"
+    ->json-server [ npm json-server@0.17.4 ]
+  ->frontend
+    ->index.js
+    ->index.html
