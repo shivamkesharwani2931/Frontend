@@ -7,7 +7,7 @@ const BASE_URL = 'http://localhost:8080/todo'
 // };
 
 const fetchData = async () => {
-  let res = await fetch(Base_URL);
+  let res = await fetch(BASE_URL);
   let data = await res.json();
   return data;
 };
@@ -20,7 +20,7 @@ const addTodo = () => {
     isCompleted: false,
   };
 
-  fetch(Base_URL, {
+  fetch(BASE_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -31,6 +31,7 @@ const addTodo = () => {
 
 const Render_UI = async () => {
   const apiData = await fetchData();
+  if (typeof apiData == 'object' && !Array.isArray(apiData)) return;
 
   const main = document.querySelector('#todo');
 
@@ -50,22 +51,44 @@ const Render_UI = async () => {
     text.innerText = items.text;
     editButton.innerText = 'edit';
     deleteButton.innerText = 'delete';
+
+    editButton.addEventListener('click', () => {
+      const singleValue = apiData?.filter((el) => el.id == items.id).map((el) => (el.id == items.id ? { ...el, isEdit: true } : el));
+      fetch(`${BASE_URL}/${items.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(...singleValue),
+      });
+     
+    });
+
+    deleteButton.addEventListener('click', () => {
+      fetch(`${BASE_URL}/${items.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+    });
+
     cardDiv.append(checkBox, id, text, editButton, deleteButton);
 
     main.append(cardDiv);
-  });
+  })
+}
 
-  /* apiData?.map((items) => {
-    console.log('🚀 ~ items:', items);
-    sub_child.innerHTML = `
-      <input type="checkbox" />
-      <h2>${items.id}</h2>
-      <h2>${items.text}</h2>
-      <button>edit</button>
-      <button>delete</button>
-    `;
-    cardDiv.append(sub_child);
-  });
-  main.append(cardDiv);
-  console.log('🚀 ~ main:', main); */
-};
+/* apiData?.map((items) => {
+  console.log(' items:', items);
+  sub_child.innerHTML = `
+    <input type="checkbox" />
+    <h2>${items.id}</h2>
+    <h2>${items.text}</h2>
+    <button>edit</button>
+    <button>delete</button>
+  `;
+  cardDiv.append(sub_child);
+});
+main.append(cardDiv);
+console.log('main:', main); };*/

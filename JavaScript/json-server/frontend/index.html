@@ -21,12 +21,12 @@
     </style>
   </head>
   <body onload="Render_UI()">
-    <div id="input_and_btn">
-      <input type="text" placeholder="enter todo..." id="value" />
-      <button onclick="addTodo()">add</button>
-    </div>
-    <!-- below this we get all the todo -->
-    <div id="todo"></div>
+    <form id=input_and_btn onsubmit="addTodo(event)">
+        <input type="text" placeholder="enter todo..." id="value" />
+        <button type="submit">add</button>
+      <!-- below this we get all the todo -->
+    </form>
+      <div id="todo"></div>
   </body>
   <script src="./index.js"></script>
 </html>

@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "todo": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "text": "json-server",
+      "isEdit": true,
+      "isLoading": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "text": "hiii",
+      "isEdit": true,
+      "isCompleted": false,
+      "id": 2
+    },
+    {
+      "text": "qwerty",
+      "isEdit": true,
+      "isCompleted": false,
+      "id": 3
+    },
+    {
+      "text": "wertyjn ",
+      "isEdit": false,
+      "isCompleted": false,
+      "id": 5
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
