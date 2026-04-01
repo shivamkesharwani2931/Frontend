@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import / Export</title>
+</head>
+
+<body>
+<header id="nav"></header>
+    <h1 id="sum"></h1>
+</body>
+<script type="module">
+    import { subValue } from '/ImportExport/Export/sum.js';
+    import { Navbar } from '/ImportExport/Export/navbar.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#nav').innerHTML = Navbar();
+        document.querySelector('#sum').innerHTML = `Sub of given value is :${subValue(10, 20)}`;
+    })
+</script>
+
+</html>
