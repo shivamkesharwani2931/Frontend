@@ -1,0 +1,26 @@
+roadToreact(terminal-> npm init -y 
+                    -> npm i axios webpack webpack-cli)
+                    npx wepack(it creates main.js)
+    -src
+        -index.jsx
+        (import axios from "axios";
+
+async function apiCall(){
+    let data = await axios.get('https://jsonplaceholder.typicode.com/users');
+    let res = await data.data;
+    console.log(res);
+}
+apiCall();)
+    
+    -dist
+        -index.html
+
+webpack.config.jsx
+(const path = require('path')
+module.exports={
+  entry: "./src/index.jsx",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+};)
