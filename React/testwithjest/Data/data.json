@@ -1,0 +1,22 @@
+{
+    "dummy":[
+        {
+            "id":1,
+            "name":"Shivam",
+            "age":23,
+            "married":false
+        },
+         {
+            "id":2,
+            "name":"XYZ",
+            "age":35,
+            "married":false
+        },
+         {
+            "id":3,
+            "name":"ABC",
+            "age":40,
+            "married":false
+        }
+    ]
+}
