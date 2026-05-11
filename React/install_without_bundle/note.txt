@@ -1,0 +1,12 @@
+-install_without_bundle
+    -public
+        -index.html
+    -src
+        -index.js
+
+-npm init -y
+-> in package.json("scripts": {
+    "dev": "react-scripts start"})
+    -->npm run dev
+-->npm i react react-dom react-scripts
+-->npm run dev
