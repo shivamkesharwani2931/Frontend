@@ -1,0 +1,155 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN APP */
+.app {
+  min-height: 100vh;
+  display: flex;
+  background: #000;
+  color: white;
+}
+
+/* LEFT FORM */
+.form-section {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* TITLE */
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  outline: none;
+}
+
+.textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* BUTTON */
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.02);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+/* RIGHT SECTION */
+.notes-section {
+  width: 50%;
+  padding: 40px;
+  border-left: 1px solid #222;
+}
+
+/* NOTES CONTAINER */
+.notes-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* EMPTY TEXT */
+.empty {
+  color: gray;
+  font-size: 14px;
+}
+
+/* CARD */
+.card {
+  width: 180px;
+  height: 210px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff7a8;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* TEXT */
+.card h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .notes-section {
+    width: 100%;
+  }
+
+  .notes-section {
+    border-left: none;
+    border-top: 1px solid #222;
+  }
+}
